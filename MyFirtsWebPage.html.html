@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Oppenheimer Interactivo</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Haz clic en la imagen</h1>
+    <!-- Cambia estos nombres por los de tus capturas -->
+    <img id="imagen" src="Oppenheimer.png" alt="Oppenheimer">
+
+    <script>
+        function cambiarImagen() {
+            const img = document.getElementById("imagen");
+            if (img.src.includes("Oppenheimer.png")) {
+                img.src = "explosion.png";  // cambia a la explosión
+            } else {
+                img.src = "Oppenheimer.png"; // vuelve a Oppenheimer
+            }
+        }
+
+        // evento: al hacer clic en la imagen, se ejecuta la función
+        document.getElementById("imagen").onclick = cambiarImagen;
+    </script>
+</body>
+</html>
